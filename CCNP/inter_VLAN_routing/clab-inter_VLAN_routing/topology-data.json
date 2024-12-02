@@ -1,0 +1,361 @@
+{
+  "name": "inter_VLAN_routing",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-c93214439ab2",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "D1": {
+      "index": "0",
+      "shortname": "D1",
+      "longname": "clab-inter_VLAN_routing-D1",
+      "fqdn": "D1.inter_VLAN_routing.io",
+      "group": "",
+      "labdir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/D1",
+      "kind": "cisco_iol",
+      "image": "arthurk99/cisco-iol-l2:17.12.01",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c93214439ab2",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/D1",
+        "clab-node-name": "D1",
+        "clab-node-type": "l2",
+        "clab-owner": "athanasios",
+        "clab-topo-file": "/home/athanasios/labs/CCNP/inter_VLAN_routing/inter_VLAN_routing.clab.yml",
+        "containerlab": "inter_VLAN_routing"
+      },
+      "port-bindings": [
+      ]
+    },
+    "D2": {
+      "index": "1",
+      "shortname": "D2",
+      "longname": "clab-inter_VLAN_routing-D2",
+      "fqdn": "D2.inter_VLAN_routing.io",
+      "group": "",
+      "labdir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/D2",
+      "kind": "cisco_iol",
+      "image": "arthurk99/cisco-iol-l2:17.12.01",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c93214439ab2",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/D2",
+        "clab-node-name": "D2",
+        "clab-node-type": "l2",
+        "clab-owner": "athanasios",
+        "clab-topo-file": "/home/athanasios/labs/CCNP/inter_VLAN_routing/inter_VLAN_routing.clab.yml",
+        "containerlab": "inter_VLAN_routing"
+      },
+      "port-bindings": [
+      ]
+    },
+    "PC1": {
+      "index": "2",
+      "shortname": "PC1",
+      "longname": "clab-inter_VLAN_routing-PC1",
+      "fqdn": "PC1.inter_VLAN_routing.io",
+      "group": "",
+      "labdir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/PC1",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c93214439ab2",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/PC1",
+        "clab-node-name": "PC1",
+        "clab-node-type": "",
+        "clab-owner": "athanasios",
+        "clab-topo-file": "/home/athanasios/labs/CCNP/inter_VLAN_routing/inter_VLAN_routing.clab.yml",
+        "containerlab": "inter_VLAN_routing"
+      },
+      "port-bindings": [
+      ]
+    },
+    "PC2": {
+      "index": "3",
+      "shortname": "PC2",
+      "longname": "clab-inter_VLAN_routing-PC2",
+      "fqdn": "PC2.inter_VLAN_routing.io",
+      "group": "",
+      "labdir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/PC2",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c93214439ab2",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/PC2",
+        "clab-node-name": "PC2",
+        "clab-node-type": "",
+        "clab-owner": "athanasios",
+        "clab-topo-file": "/home/athanasios/labs/CCNP/inter_VLAN_routing/inter_VLAN_routing.clab.yml",
+        "containerlab": "inter_VLAN_routing"
+      },
+      "port-bindings": [
+      ]
+    },
+    "PC3": {
+      "index": "4",
+      "shortname": "PC3",
+      "longname": "clab-inter_VLAN_routing-PC3",
+      "fqdn": "PC3.inter_VLAN_routing.io",
+      "group": "",
+      "labdir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/PC3",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c93214439ab2",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/PC3",
+        "clab-node-name": "PC3",
+        "clab-node-type": "",
+        "clab-owner": "athanasios",
+        "clab-topo-file": "/home/athanasios/labs/CCNP/inter_VLAN_routing/inter_VLAN_routing.clab.yml",
+        "containerlab": "inter_VLAN_routing"
+      },
+      "port-bindings": [
+      ]
+    },
+    "PC4": {
+      "index": "5",
+      "shortname": "PC4",
+      "longname": "clab-inter_VLAN_routing-PC4",
+      "fqdn": "PC4.inter_VLAN_routing.io",
+      "group": "",
+      "labdir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/PC4",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c93214439ab2",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/PC4",
+        "clab-node-name": "PC4",
+        "clab-node-type": "",
+        "clab-owner": "athanasios",
+        "clab-topo-file": "/home/athanasios/labs/CCNP/inter_VLAN_routing/inter_VLAN_routing.clab.yml",
+        "containerlab": "inter_VLAN_routing"
+      },
+      "port-bindings": [
+      ]
+    },
+    "R1": {
+      "index": "6",
+      "shortname": "R1",
+      "longname": "clab-inter_VLAN_routing-R1",
+      "fqdn": "R1.inter_VLAN_routing.io",
+      "group": "",
+      "labdir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/R1",
+      "kind": "cisco_iol",
+      "image": "arthurk99/cisco-iol:17.12.01",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c93214439ab2",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/R1",
+        "clab-node-name": "R1",
+        "clab-node-type": "",
+        "clab-owner": "athanasios",
+        "clab-topo-file": "/home/athanasios/labs/CCNP/inter_VLAN_routing/inter_VLAN_routing.clab.yml",
+        "containerlab": "inter_VLAN_routing"
+      },
+      "port-bindings": [
+      ]
+    },
+    "R3": {
+      "index": "7",
+      "shortname": "R3",
+      "longname": "clab-inter_VLAN_routing-R3",
+      "fqdn": "R3.inter_VLAN_routing.io",
+      "group": "",
+      "labdir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/R3",
+      "kind": "cisco_iol",
+      "image": "arthurk99/cisco-iol:17.12.01",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c93214439ab2",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/athanasios/labs/CCNP/inter_VLAN_routing/clab-inter_VLAN_routing/R3",
+        "clab-node-name": "R3",
+        "clab-node-type": "",
+        "clab-owner": "athanasios",
+        "clab-topo-file": "/home/athanasios/labs/CCNP/inter_VLAN_routing/inter_VLAN_routing.clab.yml",
+        "containerlab": "inter_VLAN_routing"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "R1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b0:b5:7e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "R3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:04:8c:b5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "R1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:4e:c0:f4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "D1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e4:65:ea",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "D1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:3f:06:2e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "PC1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8f:5c:d0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "D1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:33:72:b1",
+        "peer": "z"
+      },
+      "z": {
+        "node": "PC2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:27:e8:e9",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "R3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:95:9b:15",
+        "peer": "z"
+      },
+      "z": {
+        "node": "D2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ae:e1:cd",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "D2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d7:01:26",
+        "peer": "z"
+      },
+      "z": {
+        "node": "PC3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9e:4b:6c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "D2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:02:a8:fc",
+        "peer": "z"
+      },
+      "z": {
+        "node": "PC4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:de:a3:b0",
+        "peer": "a"
+      }
+    }
+  ]
+}

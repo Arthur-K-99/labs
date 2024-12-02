@@ -1,0 +1,39 @@
+name: inter_VLAN_routing
+
+topology:
+  nodes:
+    R1:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol:17.12.01
+    R3:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol:17.12.01
+    D1:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol-l2:17.12.01
+      type: l2
+    D2:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol-l2:17.12.01
+      type: l2
+    PC1:
+      kind: linux
+      image: alpine:latest
+    PC2:
+      kind: linux
+      image: alpine:latest
+    PC3:
+      kind: linux
+      image: alpine:latest
+    PC4:
+      kind: linux
+      image: alpine:latest
+
+  links:
+    - endpoints: ["R1:e0/1", "R3:e0/1"]
+    - endpoints: ["R1:e0/2", "D1:e0/1"]
+    - endpoints: ["D1:e0/2", "PC1:eth1"]
+    - endpoints: ["D1:e0/3", "PC2:eth1"]
+    - endpoints: ["R3:e0/2", "D2:e0/1"]
+    - endpoints: ["D2:e0/2", "PC3:eth1"]
+    - endpoints: ["D2:e0/3", "PC4:eth1"]
