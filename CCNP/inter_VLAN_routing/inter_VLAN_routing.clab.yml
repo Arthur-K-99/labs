@@ -1,33 +1,85 @@
 name: inter_VLAN_routing
 
 topology:
+  kinds:
+    linux:
+      image: ghcr.io/hellt/network-multitool
+
   nodes:
     R1:
       kind: cisco_iol
-      image: arthurk99/cisco-iol:17.12.01
+      image: arthurk99/cisco-iol:17.15.01
+      group: spine
+      mgmt-ipv4: 172.20.20.2
+      mgmt-ipv6: 3fff:172:20:20::2
+      restart-policy: always
     R3:
       kind: cisco_iol
-      image: arthurk99/cisco-iol:17.12.01
+      image: arthurk99/cisco-iol:17.15.01
+      group: spine
+      mgmt-ipv4: 172.20.20.3
+      mgmt-ipv6: 3fff:172:20:20::3
+      restart-policy: always
     D1:
       kind: cisco_iol
-      image: arthurk99/cisco-iol-l2:17.12.01
+      image: arthurk99/cisco-iol-l2:17.15.01
       type: l2
+      group: leaf
+      mgmt-ipv4: 172.20.20.4
+      mgmt-ipv6: 3fff:172:20:20::4
+      restart-policy: always
     D2:
       kind: cisco_iol
-      image: arthurk99/cisco-iol-l2:17.12.01
+      image: arthurk99/cisco-iol-l2:17.15.01
       type: l2
+      group: leaf
+      mgmt-ipv4: 172.20.20.5
+      mgmt-ipv6: 3fff:172:20:20::5
+      restart-policy: always
     PC1:
       kind: linux
-      image: alpine:latest
+      group: server
+      restart-policy: always
+      exec:
+        - ip route del default via 172.20.20.1 dev eth0
+        - ip addr add 10.2.50.50/24 dev eth1
+        - ip route add default via 10.2.50.1 dev eth1
+        - ip -6 route del default via 3fff:172:20:20::1 dev eth0
+        - ip -6 addr add 2001:db8:acad:1050::50/64 dev eth1
+        - ip -6 route add default via 2001:db8:acad:1050::d1 dev eth1
     PC2:
       kind: linux
-      image: alpine:latest
+      group: server
+      restart-policy: always
+      exec:
+        - ip route del default via 172.20.20.1 dev eth0
+        - ip addr add 10.2.60.50/24 dev eth1
+        - ip route add default via 10.2.60.1 dev eth1
+        - ip -6 route del default via 3fff:172:20:20::1 dev eth0
+        - ip -6 addr add 2001:db8:acad:1060::50/64 dev eth1
+        - ip -6 route add default via 2001:db8:acad:1060::d1 dev eth1
     PC3:
       kind: linux
-      image: alpine:latest
+      group: server
+      restart-policy: always
+      exec:
+        - ip route del default via 172.20.20.1 dev eth0
+        - ip addr add 10.3.75.50/24 dev eth1
+        - ip route add default via 10.3.75.1 dev eth1
+        - ip -6 route del default via 3fff:172:20:20::1 dev eth0
+        - ip -6 addr add 2001:db8:acad:3075::50/64 dev eth1
+        - ip -6 route add default via 2001:db8:acad:3075::1 dev eth1
     PC4:
       kind: linux
-      image: alpine:latest
+      group: server
+      restart-policy: always
+      exec:
+        - ip route del default via 172.20.20.1 dev eth0
+        - ip addr add 10.3.85.50/24 dev eth1
+        - ip route add default via 10.3.85.1 dev eth1
+        - ip -6 route del default via 3fff:172:20:20::1 dev eth0
+        - ip -6 addr add 2001:db8:acad:3085::50/64 dev eth1
+        - ip -6 route add default via 2001:db8:acad:3085::1 dev eth1
 
   links:
     - endpoints: ["R1:e0/1", "R3:e0/1"]

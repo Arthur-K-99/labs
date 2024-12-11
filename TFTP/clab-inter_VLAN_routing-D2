@@ -1,0 +1,124 @@
+
+!
+! Last configuration change at 20:31:18 UTC Sat Dec 7 2024 by admin
+!
+version 17.12
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname D2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition clab-mgmt
+ description clab-mgmt
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip audit notify log
+ip audit po max-events 100
+no ip domain lookup
+ip domain name lab
+ip cef
+login on-success log
+ipv6 unicast-routing
+ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+vtp version 1
+multilink bundle-name authenticated
+!
+!
+!
+!
+memory free low-watermark processor 54375
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+username admin privilege 15 secret 9 $9$xWPrchm5pp/HdE$Dtc4SBt.eHNywQWO.2/ysTZHtX7wasINDh49rQMScDo
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ description clab-mgmt
+ no switchport
+ vrf forwarding clab-mgmt
+ ip address 172.20.20.5 255.255.255.0
+ ipv6 address 3FFF:172:20:20::5/64
+!
+interface Ethernet0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 75,85,999
+ switchport mode trunk
+!
+interface Ethernet0/2
+ switchport access vlan 75
+ switchport mode access
+!
+interface Ethernet0/3
+ switchport access vlan 85
+ switchport mode access
+!
+interface Vlan75
+ ip address 10.3.75.14 255.255.255.0
+ ipv6 address FE80::D2:1 link-local
+ ipv6 address 2001:DB8:ACAD:3075::D2/64
+!
+ip forward-protocol nd
+!
+!
+ip http server
+ip http secure-server
+ip ssh bulk-mode 131072
+!
+!
+ipv6 route vrf clab-mgmt ::/0 Ethernet0/0 3FFF:172:20:20::1
+!
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end

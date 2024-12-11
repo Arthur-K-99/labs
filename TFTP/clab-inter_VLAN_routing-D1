@@ -1,0 +1,132 @@
+
+!
+! Last configuration change at 18:03:10 UTC Sat Dec 7 2024 by admin
+!
+version 17.12
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname D1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition clab-mgmt
+ description clab-mgmt
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip audit notify log
+ip audit po max-events 100
+no ip domain lookup
+ip domain name lab
+ip cef
+login on-success log
+ipv6 unicast-routing
+ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+vtp version 1
+multilink bundle-name authenticated
+!
+!
+!
+!
+memory free low-watermark processor 54375
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+username admin privilege 15 secret 9 $9$JMiYjMdxOSVrr.$75.sQapa65lwNFunqIRWakfYMy.4YRh/ZF0ehzrb4UQ
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ description clab-mgmt
+ no switchport
+ vrf forwarding clab-mgmt
+ ip address 172.20.20.4 255.255.255.0
+ ipv6 address 3FFF:172:20:20::4/64
+!
+interface Ethernet0/1
+ no switchport
+ ip address 10.1.13.13 255.255.255.0
+ ipv6 address FE80::D1:1 link-local
+ ipv6 address 2001:DB8:ACAD:10D1::D1/64
+!
+interface Ethernet0/2
+ switchport access vlan 50
+ switchport mode access
+!
+interface Ethernet0/3
+ switchport access vlan 60
+ switchport mode access
+!
+interface Vlan50
+ ip address 10.2.50.1 255.255.255.0
+ ipv6 address FE80::D1:2 link-local
+ ipv6 address 2001:DB8:ACAD:1050::D1/64
+!
+interface Vlan60
+ ip address 10.2.60.1 255.255.255.0
+ ipv6 address FE80::D1:3 link-local
+ ipv6 address 2001:DB8:ACAD:1060::D1/64
+!
+ip forward-protocol nd
+!
+!
+ip http server
+ip http secure-server
+ip ssh bulk-mode 131072
+ip route 0.0.0.0 0.0.0.0 10.1.13.1
+ip route vrf clab-mgmt 0.0.0.0 0.0.0.0 Ethernet0/0 172.20.20.1
+!
+!
+ipv6 route ::/0 2001:DB8:ACAD:10D1::1
+ipv6 route vrf clab-mgmt ::/0 Ethernet0/0 3FFF:172:20:20::1
+!
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+end

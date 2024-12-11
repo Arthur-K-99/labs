@@ -1,0 +1,148 @@
+
+!
+! Last configuration change at 19:35:23 UTC Sat Dec 7 2024 by admin
+!
+version 17.12
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition clab-mgmt
+ description clab-mgmt
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name lab
+ip cef
+login on-success log
+ipv6 unicast-routing
+ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+memory free low-watermark processor 55011
+!
+!
+spanning-tree mode rapid-pvst
+!
+!
+username admin privilege 15 secret 9 $9$gEDIUe6K/nq8sE$79XfNDhyxFq9bssNaJno.mToA5AzXfZrYBlWHUIlcAA
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ description clab-mgmt
+ vrf forwarding clab-mgmt
+ ip address 172.20.20.3 255.255.255.0
+ ipv6 address 3FFF:172:20:20::3/64
+!
+interface Ethernet0/1
+ ip address 10.1.3.3 255.255.255.0
+ ipv6 address FE80::3:1 link-local
+ ipv6 address 2001:DB8:ACAD:1013::3/64
+!
+interface Ethernet0/2
+ no ip address
+!
+interface Ethernet0/2.75
+ encapsulation dot1Q 75
+ ip address 10.3.75.1 255.255.255.0
+ ipv6 address FE80::3:2 link-local
+ ipv6 address 2001:DB8:ACAD:3075::1/64
+!
+interface Ethernet0/2.85
+ encapsulation dot1Q 85
+ ip address 10.3.85.1 255.255.255.0
+ ipv6 address FE80::3:3 link-local
+ ipv6 address 2001:DB8:ACAD:3085::1/64
+!
+interface Ethernet0/2.999
+ encapsulation dot1Q 999 native
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+!
+ip forward-protocol nd
+!
+!
+ip http server
+ip http secure-server
+ip route 0.0.0.0 0.0.0.0 10.1.3.1
+ip route vrf clab-mgmt 0.0.0.0 0.0.0.0 Ethernet0/0 172.20.20.1
+ip ssh bulk-mode 131072
+!
+ipv6 route ::/0 2001:DB8:ACAD:1013::1
+ipv6 route vrf clab-mgmt ::/0 Ethernet0/0 3FFF:172:20:20::1
+!
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
