@@ -1,0 +1,46 @@
+name: EIGRP_lab
+topology:
+  nodes:
+    R1:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol:17.15.01
+      labels:
+        graph-posX: "572.2256031733444"
+        graph-posY: "239.84976419666955"
+    R2:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol:17.15.01
+      labels:
+        graph-posX: "669.2321139393543"
+        graph-posY: "263.9093027664643"
+    R3:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol:17.15.01
+      labels:
+        graph-posX: "590.5493352474703"
+        graph-posY: "338.27339072887753"
+    R4:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol:17.15.01
+      labels:
+        graph-posX: "743.9809162760315"
+        graph-posY: "342.2121886423358"
+    R5:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol:17.15.01
+      labels:
+        graph-posX: "665.3576245899822"
+        graph-posY: "416.67348533582845"
+  links:
+    # R1 <-> R2
+    - endpoints: [ "R1:Ethernet0/1", "R2:Ethernet0/1" ]
+    # R1 <-> R3
+    - endpoints: [ "R1:Ethernet0/2", "R3:Ethernet0/1" ]
+    # R2 <-> R3
+    - endpoints: [ "R2:Ethernet0/2", "R3:Ethernet0/2" ]
+    # R2 <-> R4
+    - endpoints: [ "R2:Ethernet0/3", "R4:Ethernet0/1" ]
+    # R4 <-> R5
+    - endpoints: [ "R4:Ethernet0/2", "R5:Ethernet0/1" ]
+    # R3 <-> R5
+    - endpoints: [ "R3:Ethernet0/3", "R5:Ethernet0/2" ]
