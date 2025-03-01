@@ -1,0 +1,41 @@
+name: observe_STP_topology
+
+topology:
+  nodes:
+    D1:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol-l2:17.15.01
+      type: l2
+      group: spine
+      labels:
+        graph-level: 1
+      mgmt-ipv4: 172.20.20.2
+      mgmt-ipv6: 3fff:172:20:20::2
+      restart-policy: always
+    D2:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol-l2:17.15.01
+      type: l2
+      group: spine
+      labels:
+        graph-level: 1
+      mgmt-ipv4: 172.20.20.3
+      mgmt-ipv6: 3fff:172:20:20::3
+      restart-policy: always
+    A1:
+      kind: cisco_iol
+      image: arthurk99/cisco-iol-l2:17.15.01
+      type: l2
+      group: leaf
+      labels:
+        graph-level: 2
+      mgmt-ipv4: 172.20.20.4
+      mgmt-ipv6: 3fff:172:20:20::4
+      restart-policy: always
+
+  links:
+    - endpoints: ["D1:e0/1", "D2:e0/1"]
+    - endpoints: ["D1:e0/2", "A1:e1/0"]
+    - endpoints: ["D1:e0/3", "A1:e1/1"]
+    - endpoints: ["D2:e0/2", "A1:e2/0"]
+    - endpoints: ["D2:e0/3", "A1:e2/1"]

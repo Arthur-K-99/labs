@@ -1,0 +1,5 @@
+{
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/srl-labs/containerlab/main/schemas/clab.schema.json": "file:///home/athanasios/labs/test/test.clab.yaml"
+  }
+}
