@@ -1,0 +1,39 @@
+name: evpn-lab
+
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux
+      type: ixr-d2l
+    linux:
+      image: ghcr.io/hellt/network-multitool
+
+  nodes:
+    spine1: { kind: nokia_srlinux }
+    spine2: { kind: nokia_srlinux }
+    leaf1: { kind: nokia_srlinux }
+    leaf2: { kind: nokia_srlinux }
+
+    client1:
+      kind: linux
+      exec:
+        - ip addr add 172.16.100.1/24 dev eth1
+        - ip link set eth1 up
+    client2:
+      kind: linux
+      exec:
+        - ip addr add 172.16.100.2/24 dev eth1
+        - ip link set eth1 up
+
+  links:
+    # Spine 1 to Leaves
+    - endpoints: [ "spine1:ethernet-1/1", "leaf1:ethernet-1/1" ]
+    - endpoints: [ "spine1:ethernet-1/2", "leaf2:ethernet-1/1" ]
+
+    # Spine 2 to Leaves
+    - endpoints: [ "spine2:ethernet-1/1", "leaf1:ethernet-1/2" ]
+    - endpoints: [ "spine2:ethernet-1/2", "leaf2:ethernet-1/2" ]
+
+    # Leaves to Clients
+    - endpoints: [ "leaf1:ethernet-1/3", "client1:eth1" ]
+    - endpoints: [ "leaf2:ethernet-1/3", "client2:eth1" ]
