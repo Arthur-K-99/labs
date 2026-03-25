@@ -2,6 +2,7 @@
 /test
 *.bak
 .vscode
+clab-*/
 
 # Local .terraform directories
 **/.terraform/*

@@ -9,10 +9,18 @@ topology:
       image: ghcr.io/hellt/network-multitool
 
   nodes:
-    spine1: { kind: nokia_srlinux }
-    spine2: { kind: nokia_srlinux }
-    leaf1: { kind: nokia_srlinux }
-    leaf2: { kind: nokia_srlinux }
+    spine1: 
+      kind: nokia_srlinux
+      startup-config: configs/__clabNodeName__.json
+    spine2: 
+      kind: nokia_srlinux
+      startup-config: configs/__clabNodeName__.json
+    leaf1: 
+      kind: nokia_srlinux
+      startup-config: configs/__clabNodeName__.json
+    leaf2: 
+      kind: nokia_srlinux
+      startup-config: configs/__clabNodeName__.json
 
     client1:
       kind: linux
