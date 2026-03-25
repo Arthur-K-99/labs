@@ -143,9 +143,37 @@ To truly understand the power of this architecture, let's trace exactly what hap
 
 To Client 1 and Client 2, they just had a standard Layer 2 conversation over a dumb switch. In reality, their traffic was elegantly routed across a highly scalable, multi-path, multi-tenant BGP superhighway.
 
-## 5. How to test
+## 5. Deployment
 
--   **The Ping Test:** `docker exec clab-evpn-lab-client1 ping -c 4 172.16.100.2`
--   **Check the Underlay:** `docker exec -it clab-evpn-lab-leaf1 sr_cli` -> `show network-instance default protocols bgp routes ipv4 summary`
--   **Check the Overlay:** `show network-instance default protocols bgp neighbor`
--   **Check the MAC-VRF:** `show network-instance mac-vrf-1 bridge-table mac-table all`
+This lab uses Containerlab to spin up the virtual Nokia SR Linux nodes and Alpine Linux clients. 
+
+**To deploy the lab:**
+```bash
+sudo clab deploy -t evpn-lab.clab.yml --reconfigure
+```
+
+**To destroy the lab:**
+```bash
+sudo clab destroy -t evpn-lab.clab.yml --cleanup
+```
+
+## 6. Verification & Testing
+
+Once the lab is deployed, you can verify the fabric is passing traffic from the bottom up.
+
+**1. Verify the Underlay (Routing Highway):**
+Check that the eBGP sessions between the Spines and Leaves are established.
+* `docker exec -it clab-evpn-lab-leaf1 sr_cli`
+* `show network-instance default protocols bgp summary`
+
+**2. Verify the Overlay (EVPN Control Plane):**
+Check that the multihop eBGP sessions between the Leaf loopbacks are active and passing MAC routes.
+* `show network-instance default protocols bgp routes evpn route-type summary`
+
+**3. Verify the MAC-VRF (Virtual Switch):**
+Confirm that the Leaf switch has learned the remote client's MAC address via the VXLAN tunnel.
+* `show network-instance mac-vrf-1 bridge-table mac-table all`
+
+**4. The End-to-End Ping (Data Plane):**
+Finally, test Layer 2 adjacency across the routed fabric.
+* `docker exec clab-evpn-lab-client1 ping -c 4 172.16.100.2`
