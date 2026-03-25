@@ -4,10 +4,321 @@
       "generated-by": "SRLINUX",
       "name": "",
       "comment": "",
-      "created": "2026-03-25T00:48:15.823Z",
+      "created": "2026-03-25T01:14:25.293Z",
       "release": "v26.3.1",
-      "enabled-yang-features": ["srl_nokia-features:aaa-fqdn-for-tacacs-server-address", "srl_nokia-features:aaa-remote-superuser", "srl_nokia-features:aaa-server-timeout", "srl_nokia-features:aaa-servers-health-check", "srl_nokia-features:aaa-servers-tacacs-vsa", "srl_nokia-features:aaa-spiffe-id", "srl_nokia-features:aaa-superuser", "srl_nokia-features:acl-cpm-filter-type-mac", "srl_nokia-features:acl-filter-allowed-on-irb-interfaces", "srl_nokia-features:acl-filter-allowed-on-l2-interfaces", "srl_nokia-features:acl-filter-ip-allowed-on-l2-interfaces", "srl_nokia-features:acl-filter-mac", "srl_nokia-features:acl-filter-mac-allowed-on-l2-interfaces", "srl_nokia-features:acl-filter-mac-allowed-on-l3-interfaces", "srl_nokia-features:acl-if-output-shared-mac-tcam-entries", "srl_nokia-features:acl-if-output-shared-tcam-entries", "srl_nokia-features:acl-ip-prefix-list", "srl_nokia-features:acl-logging", "srl_nokia-features:acl-policer", "srl_nokia-features:acl-policer-for-mac-filters", "srl_nokia-features:acl-subinterface-entry-statistics", "srl_nokia-features:admin-user-roles", "srl_nokia-features:anycast-gw", "srl_nokia-features:arp-nd-datapath-programming", "srl_nokia-features:backplane-facing-capacity", "srl_nokia-features:bfd", "srl_nokia-features:bgp-add-paths", "srl_nokia-features:bgp-add-paths-evpn", "srl_nokia-features:bgp-add-paths-policy-control", "srl_nokia-features:bgp-afi-safi-default-policy-action", "srl_nokia-features:bgp-afi-safi-policy", "srl_nokia-features:bgp-auth-password", "srl_nokia-features:bgp-auto-link-bandwidth", "srl_nokia-features:bgp-cfg-afi-safi-list", "srl_nokia-features:bgp-domain-path", "srl_nokia-features:bgp-graceful-restart-gaps", "srl_nokia-features:bgp-graceful-restart-state-additions", "srl_nokia-features:bgp-group-based-policy", "srl_nokia-features:bgp-import-export-policy-leaflist", "srl_nokia-features:bgp-ipv6-next-hop-tunnel-resolution", "srl_nokia-features:bgp-local-as-container-iso-list", "srl_nokia-features:bgp-max-ecmp-hash-buckets", "srl_nokia-features:bgp-mtu-discovery", "srl_nokia-features:bgp-multipath-maximum-paths-limit-128", "srl_nokia-features:bgp-peertype-maximum-paths", "srl_nokia-features:bgp-prefix-limit", "srl_nokia-features:bgp-prefix-limit-forever", "srl_nokia-features:bgp-prefix-limit-last-exceeded", "srl_nokia-features:bgp-prefix-limit-post-policy", "srl_nokia-features:bgp-prefix-limit-received", "srl_nokia-features:bgp-restart-max-wait", "srl_nokia-features:bgp-rib-afi-safi-list", "srl_nokia-features:bgp-rib-afi-safi-list-for-evpn", "srl_nokia-features:bgp-rib-afi-safi-route", "srl_nokia-features:bgp-route-flap-damping", "srl_nokia-features:bgp-rr-for-rtc", "srl_nokia-features:bgp-rtc", "srl_nokia-features:bgp-send-community-leaflist", "srl_nokia-features:bgp-single-hop-connected-check", "srl_nokia-features:bgp-unnumbered-peers", "srl_nokia-features:bgp-vpn-allow-export", "srl_nokia-features:breakout-ports-4", "srl_nokia-features:breakout-speed-10G", "srl_nokia-features:breakout-speed-25G", "srl_nokia-features:bridged", "srl_nokia-features:bt-split-horizon-groups", "srl_nokia-features:chassis-vertical-orientation", "srl_nokia-features:cli-modeled-environment", "srl_nokia-features:cli-plugin-authorization", "srl_nokia-features:combined-bgp-ecmp", "srl_nokia-features:config-l2-mtu-default", "srl_nokia-features:config-sub-if-l2-mtu", "srl_nokia-features:cpm-datapath-resources", "srl_nokia-features:dac-link-training", "srl_nokia-features:dhcp-relay", "srl_nokia-features:dhcp-relay-fqdn", "srl_nokia-features:dhcp-relay-irb-l2-circuit-id", "srl_nokia-features:dhcp-server", "srl_nokia-features:dhcp-svr-boot-compute", "srl_nokia-features:dhcp-svr-option-121", "srl_nokia-features:dhcp-svr-option-26", "srl_nokia-features:dot1q-vlan-ranges", "srl_nokia-features:dot1x-tunnel", "srl_nokia-features:dot1x-tunnel-system-stats", "srl_nokia-features:dot1x-tunnel-tunnel-all", "srl_nokia-features:dynamic-tcam", "srl_nokia-features:egress-mac-filter-restriction", "srl_nokia-features:event-handler", "srl_nokia-features:evpn", "srl_nokia-features:evpn-iff", "srl_nokia-features:evpn-iff-unnumbered", "srl_nokia-features:evpn-ifl-gw-ip", "srl_nokia-features:evpn-ifl-host", "srl_nokia-features:evpn-ifl-host-ip-aliasing", "srl_nokia-features:evpn-ifl-unequal-ecmp", "srl_nokia-features:evpn-mh", "srl_nokia-features:evpn-mh-ip-aliasing", "srl_nokia-features:evpn-mh-multicast-non-df-tcam-resource", "srl_nokia-features:evpn-mh-virtual-es", "srl_nokia-features:evpn-route-internal-tags", "srl_nokia-features:evpn-vxlan-ifl", "srl_nokia-features:evpn-vxlan-mac-vrf", "srl_nokia-features:evpn-vxlan-oism", "srl_nokia-features:factory-reset", "srl_nokia-features:fan-avg-speed-show-report", "srl_nokia-features:fib-programming-progress", "srl_nokia-features:fib-tunnel-programming", "srl_nokia-features:fixed", "srl_nokia-features:forward-error-correction-ethernet", "srl_nokia-features:glome-authentication", "srl_nokia-features:gnmi-extensions", "srl_nokia-features:gnmi-services", "srl_nokia-features:gnoi-bgp", "srl_nokia-features:gnoi-bootconfig", "srl_nokia-features:gnoi-containerz", "srl_nokia-features:gnoi-export-protos", "srl_nokia-features:gnoi-healthz", "srl_nokia-features:gnoi-healthz-forwarding-complex", "srl_nokia-features:gnsi-accounting", "srl_nokia-features:gnsi-authz", "srl_nokia-features:gnsi-certz", "srl_nokia-features:gnsi-credentialz", "srl_nokia-features:gnsi-pathz", "srl_nokia-features:group-based-policy", "srl_nokia-features:group-based-policy-ip-vrf", "srl_nokia-features:grpc-server", "srl_nokia-features:grpc-server-max-concurrent-streams", "srl_nokia-features:grpc-tunnel", "srl_nokia-features:grub-password", "srl_nokia-features:icmp-rate-control", "srl_nokia-features:igmp", "srl_nokia-features:igmp-ipvrf", "srl_nokia-features:igmp-snooping", "srl_nokia-features:igp-overload-on-fib-failure", "srl_nokia-features:ingress-subif-policing", "srl_nokia-features:inter-as-nhsrr-ipvpn", "srl_nokia-features:interface-evpn-internal-tags", "srl_nokia-features:interface-references", "srl_nokia-features:internal-tags", "srl_nokia-features:intf-eth-in-undersize-frames", "srl_nokia-features:ip-acl-dscp-set", "srl_nokia-features:ip-qos-multifield", "srl_nokia-features:ip-qos-multifield-on-bridged-subifs", "srl_nokia-features:ipv4-unnumbered", "srl_nokia-features:isis-level-passive", "srl_nokia-features:isis-lsdb", "srl_nokia-features:isis-lsdb-te-extensions", "srl_nokia-features:isis-mi", "srl_nokia-features:isis-mt", "srl_nokia-features:isis-multi-part-tlv", "srl_nokia-features:isis-nsf", "srl_nokia-features:isis-topology-state", "srl_nokia-features:keychain", "srl_nokia-features:l2-proxy-arp", "srl_nokia-features:l2-proxy-arp-nd-control-flood-on-evpn", "srl_nokia-features:l2-proxy-arp-nd-route-internal-tags", "srl_nokia-features:l2-proxy-nd", "srl_nokia-features:l2cp-transparency", "srl_nokia-features:l2cp-transparency-stats", "srl_nokia-features:l2cp-transparency-xstp", "srl_nokia-features:l3-proxy-arp", "srl_nokia-features:l3-proxy-arp-irb", "srl_nokia-features:l3-proxy-nd", "srl_nokia-features:l3-proxy-nd-irb", "srl_nokia-features:lacp-fallback", "srl_nokia-features:lag", "srl_nokia-features:license", "srl_nokia-features:lldp-component", "srl_nokia-features:lldp-suppress-tlv", "srl_nokia-features:lldp-vlan", "srl_nokia-features:load-balancing", "srl_nokia-features:location-coordinates", "srl_nokia-features:log-filter-for-negation", "srl_nokia-features:log-tls", "srl_nokia-features:longest-prefix-match", "srl_nokia-features:maintenance-mode-improvements", "srl_nokia-features:mcast-route-policy", "srl_nokia-features:mirror-dest-local", "srl_nokia-features:mirror-dest-remote", "srl_nokia-features:mirror-dest-remote-tunnel-encap-l2ogre", "srl_nokia-features:mirror-source-acl", "srl_nokia-features:mirror-source-intf", "srl_nokia-features:mirror-source-subintf", "srl_nokia-features:mirroring", "srl_nokia-features:mirroring-intf-stats", "srl_nokia-features:mld", "srl_nokia-features:mld-ipvrf", "srl_nokia-features:mld-snooping", "srl_nokia-features:named-queues-and-named-fcs", "srl_nokia-features:ndk-admin-state", "srl_nokia-features:ndk-auto-telemetry-state", "srl_nokia-features:ndk-disable-caching", "srl_nokia-features:netconf", "srl_nokia-features:netconf-unix-socket", "srl_nokia-features:network-instance-leaked-route-readvertisement", "srl_nokia-features:network-instance-route-limits", "srl_nokia-features:network-instance-single-dynamic-label-block-mpls", "srl_nokia-features:nhsrr-evpn", "srl_nokia-features:ntp-tls", "srl_nokia-features:openconfig", "srl_nokia-features:packet-tracer", "srl_nokia-features:password-complexity-repeated-characters", "srl_nokia-features:password-complexity-sequence", "srl_nokia-features:pim", "srl_nokia-features:pim-ipvrf", "srl_nokia-features:platform-7220-d2", "srl_nokia-features:platform-group-based-policy", "srl_nokia-features:platform-group-based-policy-ip-vrf", "srl_nokia-features:policy-based-forwarding-dscp-ip-protocol", "srl_nokia-features:policy-based-forwarding-nh-transport", "srl_nokia-features:port-breakout", "srl_nokia-features:port-fec-clause74", "srl_nokia-features:port-groups", "srl_nokia-features:port-speed-100G", "srl_nokia-features:port-speed-10G", "srl_nokia-features:port-speed-1G", "srl_nokia-features:port-speed-25G", "srl_nokia-features:port-speed-40G", "srl_nokia-features:qos", "srl_nokia-features:qos-dot1p-classifier-policy", "srl_nokia-features:qos-dot1p-rewrite-policy", "srl_nokia-features:qos-drop-probability", "srl_nokia-features:qos-dscp-classifier-policy", "srl_nokia-features:qos-dscp-rewrite-policy", "srl_nokia-features:qos-ecn", "srl_nokia-features:qos-irb-subinterface", "srl_nokia-features:qos-management-protocols-dscp", "srl_nokia-features:qos-multicast-queue", "srl_nokia-features:qos-queue-high-threshold", "srl_nokia-features:qos-queue-management-profile", "srl_nokia-features:qos-rewrite-dot1p", "srl_nokia-features:qos-scheduler-policies", "srl_nokia-features:qos-unicast-queue", "srl_nokia-features:qos-vxlan-classifier-policy", "srl_nokia-features:qos-wred-traffic-type-tcp", "srl_nokia-features:ra-guard", "srl_nokia-features:radius-source-address", "srl_nokia-features:reload-delay", "srl_nokia-features:route-leaking", "srl_nokia-features:route-table-show-report-improvements", "srl_nokia-features:router-advertisement-rdnss-option", "srl_nokia-features:routing-policy-bgp-disable-fib", "srl_nokia-features:routing-policy-bgp-local-pref-set", "srl_nokia-features:routing-policy-bgp-med", "srl_nokia-features:routing-policy-bgp-next-hop-self-action", "srl_nokia-features:routing-policy-bgp-next-hop-set-action", "srl_nokia-features:routing-policy-community-match-set-options", "srl_nokia-features:routing-policy-enhanced-as-path-set", "srl_nokia-features:routing-policy-extended-community-actions", "srl_nokia-features:routing-policy-extended-community-sets", "srl_nokia-features:routing-policy-isis-actions", "srl_nokia-features:routing-policy-match-protocol-redefine", "srl_nokia-features:routing-policy-named-statements", "srl_nokia-features:routing-policy-next-policy", "srl_nokia-features:routing-policy-next-statement", "srl_nokia-features:routing-policy-ospf-actions", "srl_nokia-features:routing-policy-preference-action", "srl_nokia-features:routing-policy-prefix-set-match-options-any", "srl_nokia-features:routing-policy-standard-community-actions", "srl_nokia-features:routing-policy-standard-community-sets", "srl_nokia-features:routing-policy-subroutines", "srl_nokia-features:routing-policy-table-connections", "srl_nokia-features:routing-policy-tag-set-match-options", "srl_nokia-features:secure-boot", "srl_nokia-features:segment-routing-adjacency-sid", "srl_nokia-features:segment-routing-shared-sid", "srl_nokia-features:sflow", "srl_nokia-features:sflow-collector-dscp", "srl_nokia-features:show-acl-aclfilter", "srl_nokia-features:snmp", "srl_nokia-features:snmp-counters", "srl_nokia-features:snmp-over-tcp", "srl_nokia-features:snmp-tools-trap", "srl_nokia-features:snmp-traps", "srl_nokia-features:snmp-v3", "srl_nokia-features:stat-interface-link-transitions", "srl_nokia-features:static-next-hop-group-backup", "srl_nokia-features:static-next-hop-unnumbered-interface", "srl_nokia-features:static-next-hop-unnumbered-mpls", "srl_nokia-features:static-nhg-nh-reference", "srl_nokia-features:static-route-group-based-policy", "srl_nokia-features:static-route-tag-set", "srl_nokia-features:static-route-tag-value", "srl_nokia-features:storm-control", "srl_nokia-features:storm-control-action", "srl_nokia-features:stp", "srl_nokia-features:strict-request-path-verification", "srl_nokia-features:subif-acl-policer", "srl_nokia-features:subif-policer", "srl_nokia-features:system-filter", "srl_nokia-features:system-forwarding-mode", "srl_nokia-features:system-hash-seed-from-mac", "srl_nokia-features:system-resource-tunnels", "srl_nokia-features:system-resource-utilization", "srl_nokia-features:system-resource-vp-lag-groups", "srl_nokia-features:tacacs-source-address", "srl_nokia-features:tftp", "srl_nokia-features:tls-cert-expiry", "srl_nokia-features:tls-server-profile-rename", "srl_nokia-features:tpm-1-2", "srl_nokia-features:transceiver-link-length-info", "srl_nokia-features:trident3", "srl_nokia-features:unequal-ecmp", "srl_nokia-features:unified-forwarding-tables", "srl_nokia-features:virtual-ip-discovery", "srl_nokia-features:vlan-id-optional", "srl_nokia-features:vlan-tpid", "srl_nokia-features:vxlan", "srl_nokia-features:vxlan-stats", "srl_nokia-features:warm-reboot"],
-      "checksum": "d82fce70bbade88d$1835f2b77659cc0122af97fca19640f8db910e4d"
+      "enabled-yang-features": [
+        "srl_nokia-features:aaa-fqdn-for-tacacs-server-address",
+        "srl_nokia-features:aaa-remote-superuser",
+        "srl_nokia-features:aaa-server-timeout",
+        "srl_nokia-features:aaa-servers-health-check",
+        "srl_nokia-features:aaa-servers-tacacs-vsa",
+        "srl_nokia-features:aaa-spiffe-id",
+        "srl_nokia-features:aaa-superuser",
+        "srl_nokia-features:acl-cpm-filter-type-mac",
+        "srl_nokia-features:acl-filter-allowed-on-irb-interfaces",
+        "srl_nokia-features:acl-filter-allowed-on-l2-interfaces",
+        "srl_nokia-features:acl-filter-ip-allowed-on-l2-interfaces",
+        "srl_nokia-features:acl-filter-mac",
+        "srl_nokia-features:acl-filter-mac-allowed-on-l2-interfaces",
+        "srl_nokia-features:acl-filter-mac-allowed-on-l3-interfaces",
+        "srl_nokia-features:acl-if-output-shared-mac-tcam-entries",
+        "srl_nokia-features:acl-if-output-shared-tcam-entries",
+        "srl_nokia-features:acl-ip-prefix-list",
+        "srl_nokia-features:acl-logging",
+        "srl_nokia-features:acl-policer",
+        "srl_nokia-features:acl-policer-for-mac-filters",
+        "srl_nokia-features:acl-subinterface-entry-statistics",
+        "srl_nokia-features:admin-user-roles",
+        "srl_nokia-features:anycast-gw",
+        "srl_nokia-features:arp-nd-datapath-programming",
+        "srl_nokia-features:backplane-facing-capacity",
+        "srl_nokia-features:bfd",
+        "srl_nokia-features:bgp-add-paths",
+        "srl_nokia-features:bgp-add-paths-evpn",
+        "srl_nokia-features:bgp-add-paths-policy-control",
+        "srl_nokia-features:bgp-afi-safi-default-policy-action",
+        "srl_nokia-features:bgp-afi-safi-policy",
+        "srl_nokia-features:bgp-auth-password",
+        "srl_nokia-features:bgp-auto-link-bandwidth",
+        "srl_nokia-features:bgp-cfg-afi-safi-list",
+        "srl_nokia-features:bgp-domain-path",
+        "srl_nokia-features:bgp-graceful-restart-gaps",
+        "srl_nokia-features:bgp-graceful-restart-state-additions",
+        "srl_nokia-features:bgp-group-based-policy",
+        "srl_nokia-features:bgp-import-export-policy-leaflist",
+        "srl_nokia-features:bgp-ipv6-next-hop-tunnel-resolution",
+        "srl_nokia-features:bgp-local-as-container-iso-list",
+        "srl_nokia-features:bgp-max-ecmp-hash-buckets",
+        "srl_nokia-features:bgp-mtu-discovery",
+        "srl_nokia-features:bgp-multipath-maximum-paths-limit-128",
+        "srl_nokia-features:bgp-peertype-maximum-paths",
+        "srl_nokia-features:bgp-prefix-limit",
+        "srl_nokia-features:bgp-prefix-limit-forever",
+        "srl_nokia-features:bgp-prefix-limit-last-exceeded",
+        "srl_nokia-features:bgp-prefix-limit-post-policy",
+        "srl_nokia-features:bgp-prefix-limit-received",
+        "srl_nokia-features:bgp-restart-max-wait",
+        "srl_nokia-features:bgp-rib-afi-safi-list",
+        "srl_nokia-features:bgp-rib-afi-safi-list-for-evpn",
+        "srl_nokia-features:bgp-rib-afi-safi-route",
+        "srl_nokia-features:bgp-route-flap-damping",
+        "srl_nokia-features:bgp-rr-for-rtc",
+        "srl_nokia-features:bgp-rtc",
+        "srl_nokia-features:bgp-send-community-leaflist",
+        "srl_nokia-features:bgp-single-hop-connected-check",
+        "srl_nokia-features:bgp-unnumbered-peers",
+        "srl_nokia-features:bgp-vpn-allow-export",
+        "srl_nokia-features:breakout-ports-4",
+        "srl_nokia-features:breakout-speed-10G",
+        "srl_nokia-features:breakout-speed-25G",
+        "srl_nokia-features:bridged",
+        "srl_nokia-features:bt-split-horizon-groups",
+        "srl_nokia-features:chassis-vertical-orientation",
+        "srl_nokia-features:cli-modeled-environment",
+        "srl_nokia-features:cli-plugin-authorization",
+        "srl_nokia-features:combined-bgp-ecmp",
+        "srl_nokia-features:config-l2-mtu-default",
+        "srl_nokia-features:config-sub-if-l2-mtu",
+        "srl_nokia-features:cpm-datapath-resources",
+        "srl_nokia-features:dac-link-training",
+        "srl_nokia-features:dhcp-relay",
+        "srl_nokia-features:dhcp-relay-fqdn",
+        "srl_nokia-features:dhcp-relay-irb-l2-circuit-id",
+        "srl_nokia-features:dhcp-server",
+        "srl_nokia-features:dhcp-svr-boot-compute",
+        "srl_nokia-features:dhcp-svr-option-121",
+        "srl_nokia-features:dhcp-svr-option-26",
+        "srl_nokia-features:dot1q-vlan-ranges",
+        "srl_nokia-features:dot1x-tunnel",
+        "srl_nokia-features:dot1x-tunnel-system-stats",
+        "srl_nokia-features:dot1x-tunnel-tunnel-all",
+        "srl_nokia-features:dynamic-tcam",
+        "srl_nokia-features:egress-mac-filter-restriction",
+        "srl_nokia-features:event-handler",
+        "srl_nokia-features:evpn",
+        "srl_nokia-features:evpn-iff",
+        "srl_nokia-features:evpn-iff-unnumbered",
+        "srl_nokia-features:evpn-ifl-gw-ip",
+        "srl_nokia-features:evpn-ifl-host",
+        "srl_nokia-features:evpn-ifl-host-ip-aliasing",
+        "srl_nokia-features:evpn-ifl-unequal-ecmp",
+        "srl_nokia-features:evpn-mh",
+        "srl_nokia-features:evpn-mh-ip-aliasing",
+        "srl_nokia-features:evpn-mh-multicast-non-df-tcam-resource",
+        "srl_nokia-features:evpn-mh-virtual-es",
+        "srl_nokia-features:evpn-route-internal-tags",
+        "srl_nokia-features:evpn-vxlan-ifl",
+        "srl_nokia-features:evpn-vxlan-mac-vrf",
+        "srl_nokia-features:evpn-vxlan-oism",
+        "srl_nokia-features:factory-reset",
+        "srl_nokia-features:fan-avg-speed-show-report",
+        "srl_nokia-features:fib-programming-progress",
+        "srl_nokia-features:fib-tunnel-programming",
+        "srl_nokia-features:fixed",
+        "srl_nokia-features:forward-error-correction-ethernet",
+        "srl_nokia-features:glome-authentication",
+        "srl_nokia-features:gnmi-extensions",
+        "srl_nokia-features:gnmi-services",
+        "srl_nokia-features:gnoi-bgp",
+        "srl_nokia-features:gnoi-bootconfig",
+        "srl_nokia-features:gnoi-containerz",
+        "srl_nokia-features:gnoi-export-protos",
+        "srl_nokia-features:gnoi-healthz",
+        "srl_nokia-features:gnoi-healthz-forwarding-complex",
+        "srl_nokia-features:gnsi-accounting",
+        "srl_nokia-features:gnsi-authz",
+        "srl_nokia-features:gnsi-certz",
+        "srl_nokia-features:gnsi-credentialz",
+        "srl_nokia-features:gnsi-pathz",
+        "srl_nokia-features:group-based-policy",
+        "srl_nokia-features:group-based-policy-ip-vrf",
+        "srl_nokia-features:grpc-server",
+        "srl_nokia-features:grpc-server-max-concurrent-streams",
+        "srl_nokia-features:grpc-tunnel",
+        "srl_nokia-features:grub-password",
+        "srl_nokia-features:icmp-rate-control",
+        "srl_nokia-features:igmp",
+        "srl_nokia-features:igmp-ipvrf",
+        "srl_nokia-features:igmp-snooping",
+        "srl_nokia-features:igp-overload-on-fib-failure",
+        "srl_nokia-features:ingress-subif-policing",
+        "srl_nokia-features:inter-as-nhsrr-ipvpn",
+        "srl_nokia-features:interface-evpn-internal-tags",
+        "srl_nokia-features:interface-references",
+        "srl_nokia-features:internal-tags",
+        "srl_nokia-features:intf-eth-in-undersize-frames",
+        "srl_nokia-features:ip-acl-dscp-set",
+        "srl_nokia-features:ip-qos-multifield",
+        "srl_nokia-features:ip-qos-multifield-on-bridged-subifs",
+        "srl_nokia-features:ipv4-unnumbered",
+        "srl_nokia-features:isis-level-passive",
+        "srl_nokia-features:isis-lsdb",
+        "srl_nokia-features:isis-lsdb-te-extensions",
+        "srl_nokia-features:isis-mi",
+        "srl_nokia-features:isis-mt",
+        "srl_nokia-features:isis-multi-part-tlv",
+        "srl_nokia-features:isis-nsf",
+        "srl_nokia-features:isis-topology-state",
+        "srl_nokia-features:keychain",
+        "srl_nokia-features:l2-proxy-arp",
+        "srl_nokia-features:l2-proxy-arp-nd-control-flood-on-evpn",
+        "srl_nokia-features:l2-proxy-arp-nd-route-internal-tags",
+        "srl_nokia-features:l2-proxy-nd",
+        "srl_nokia-features:l2cp-transparency",
+        "srl_nokia-features:l2cp-transparency-stats",
+        "srl_nokia-features:l2cp-transparency-xstp",
+        "srl_nokia-features:l3-proxy-arp",
+        "srl_nokia-features:l3-proxy-arp-irb",
+        "srl_nokia-features:l3-proxy-nd",
+        "srl_nokia-features:l3-proxy-nd-irb",
+        "srl_nokia-features:lacp-fallback",
+        "srl_nokia-features:lag",
+        "srl_nokia-features:license",
+        "srl_nokia-features:lldp-component",
+        "srl_nokia-features:lldp-suppress-tlv",
+        "srl_nokia-features:lldp-vlan",
+        "srl_nokia-features:load-balancing",
+        "srl_nokia-features:location-coordinates",
+        "srl_nokia-features:log-filter-for-negation",
+        "srl_nokia-features:log-tls",
+        "srl_nokia-features:longest-prefix-match",
+        "srl_nokia-features:maintenance-mode-improvements",
+        "srl_nokia-features:mcast-route-policy",
+        "srl_nokia-features:mirror-dest-local",
+        "srl_nokia-features:mirror-dest-remote",
+        "srl_nokia-features:mirror-dest-remote-tunnel-encap-l2ogre",
+        "srl_nokia-features:mirror-source-acl",
+        "srl_nokia-features:mirror-source-intf",
+        "srl_nokia-features:mirror-source-subintf",
+        "srl_nokia-features:mirroring",
+        "srl_nokia-features:mirroring-intf-stats",
+        "srl_nokia-features:mld",
+        "srl_nokia-features:mld-ipvrf",
+        "srl_nokia-features:mld-snooping",
+        "srl_nokia-features:named-queues-and-named-fcs",
+        "srl_nokia-features:ndk-admin-state",
+        "srl_nokia-features:ndk-auto-telemetry-state",
+        "srl_nokia-features:ndk-disable-caching",
+        "srl_nokia-features:netconf",
+        "srl_nokia-features:netconf-unix-socket",
+        "srl_nokia-features:network-instance-leaked-route-readvertisement",
+        "srl_nokia-features:network-instance-route-limits",
+        "srl_nokia-features:network-instance-single-dynamic-label-block-mpls",
+        "srl_nokia-features:nhsrr-evpn",
+        "srl_nokia-features:ntp-tls",
+        "srl_nokia-features:openconfig",
+        "srl_nokia-features:packet-tracer",
+        "srl_nokia-features:password-complexity-repeated-characters",
+        "srl_nokia-features:password-complexity-sequence",
+        "srl_nokia-features:pim",
+        "srl_nokia-features:pim-ipvrf",
+        "srl_nokia-features:platform-7220-d2",
+        "srl_nokia-features:platform-group-based-policy",
+        "srl_nokia-features:platform-group-based-policy-ip-vrf",
+        "srl_nokia-features:policy-based-forwarding-dscp-ip-protocol",
+        "srl_nokia-features:policy-based-forwarding-nh-transport",
+        "srl_nokia-features:port-breakout",
+        "srl_nokia-features:port-fec-clause74",
+        "srl_nokia-features:port-groups",
+        "srl_nokia-features:port-speed-100G",
+        "srl_nokia-features:port-speed-10G",
+        "srl_nokia-features:port-speed-1G",
+        "srl_nokia-features:port-speed-25G",
+        "srl_nokia-features:port-speed-40G",
+        "srl_nokia-features:qos",
+        "srl_nokia-features:qos-dot1p-classifier-policy",
+        "srl_nokia-features:qos-dot1p-rewrite-policy",
+        "srl_nokia-features:qos-drop-probability",
+        "srl_nokia-features:qos-dscp-classifier-policy",
+        "srl_nokia-features:qos-dscp-rewrite-policy",
+        "srl_nokia-features:qos-ecn",
+        "srl_nokia-features:qos-irb-subinterface",
+        "srl_nokia-features:qos-management-protocols-dscp",
+        "srl_nokia-features:qos-multicast-queue",
+        "srl_nokia-features:qos-queue-high-threshold",
+        "srl_nokia-features:qos-queue-management-profile",
+        "srl_nokia-features:qos-rewrite-dot1p",
+        "srl_nokia-features:qos-scheduler-policies",
+        "srl_nokia-features:qos-unicast-queue",
+        "srl_nokia-features:qos-vxlan-classifier-policy",
+        "srl_nokia-features:qos-wred-traffic-type-tcp",
+        "srl_nokia-features:ra-guard",
+        "srl_nokia-features:radius-source-address",
+        "srl_nokia-features:reload-delay",
+        "srl_nokia-features:route-leaking",
+        "srl_nokia-features:route-table-show-report-improvements",
+        "srl_nokia-features:router-advertisement-rdnss-option",
+        "srl_nokia-features:routing-policy-bgp-disable-fib",
+        "srl_nokia-features:routing-policy-bgp-local-pref-set",
+        "srl_nokia-features:routing-policy-bgp-med",
+        "srl_nokia-features:routing-policy-bgp-next-hop-self-action",
+        "srl_nokia-features:routing-policy-bgp-next-hop-set-action",
+        "srl_nokia-features:routing-policy-community-match-set-options",
+        "srl_nokia-features:routing-policy-enhanced-as-path-set",
+        "srl_nokia-features:routing-policy-extended-community-actions",
+        "srl_nokia-features:routing-policy-extended-community-sets",
+        "srl_nokia-features:routing-policy-isis-actions",
+        "srl_nokia-features:routing-policy-match-protocol-redefine",
+        "srl_nokia-features:routing-policy-named-statements",
+        "srl_nokia-features:routing-policy-next-policy",
+        "srl_nokia-features:routing-policy-next-statement",
+        "srl_nokia-features:routing-policy-ospf-actions",
+        "srl_nokia-features:routing-policy-preference-action",
+        "srl_nokia-features:routing-policy-prefix-set-match-options-any",
+        "srl_nokia-features:routing-policy-standard-community-actions",
+        "srl_nokia-features:routing-policy-standard-community-sets",
+        "srl_nokia-features:routing-policy-subroutines",
+        "srl_nokia-features:routing-policy-table-connections",
+        "srl_nokia-features:routing-policy-tag-set-match-options",
+        "srl_nokia-features:secure-boot",
+        "srl_nokia-features:segment-routing-adjacency-sid",
+        "srl_nokia-features:segment-routing-shared-sid",
+        "srl_nokia-features:sflow",
+        "srl_nokia-features:sflow-collector-dscp",
+        "srl_nokia-features:show-acl-aclfilter",
+        "srl_nokia-features:snmp",
+        "srl_nokia-features:snmp-counters",
+        "srl_nokia-features:snmp-over-tcp",
+        "srl_nokia-features:snmp-tools-trap",
+        "srl_nokia-features:snmp-traps",
+        "srl_nokia-features:snmp-v3",
+        "srl_nokia-features:stat-interface-link-transitions",
+        "srl_nokia-features:static-next-hop-group-backup",
+        "srl_nokia-features:static-next-hop-unnumbered-interface",
+        "srl_nokia-features:static-next-hop-unnumbered-mpls",
+        "srl_nokia-features:static-nhg-nh-reference",
+        "srl_nokia-features:static-route-group-based-policy",
+        "srl_nokia-features:static-route-tag-set",
+        "srl_nokia-features:static-route-tag-value",
+        "srl_nokia-features:storm-control",
+        "srl_nokia-features:storm-control-action",
+        "srl_nokia-features:stp",
+        "srl_nokia-features:strict-request-path-verification",
+        "srl_nokia-features:subif-acl-policer",
+        "srl_nokia-features:subif-policer",
+        "srl_nokia-features:system-filter",
+        "srl_nokia-features:system-forwarding-mode",
+        "srl_nokia-features:system-hash-seed-from-mac",
+        "srl_nokia-features:system-resource-tunnels",
+        "srl_nokia-features:system-resource-utilization",
+        "srl_nokia-features:system-resource-vp-lag-groups",
+        "srl_nokia-features:tacacs-source-address",
+        "srl_nokia-features:tftp",
+        "srl_nokia-features:tls-cert-expiry",
+        "srl_nokia-features:tls-server-profile-rename",
+        "srl_nokia-features:tpm-1-2",
+        "srl_nokia-features:transceiver-link-length-info",
+        "srl_nokia-features:trident3",
+        "srl_nokia-features:unequal-ecmp",
+        "srl_nokia-features:unified-forwarding-tables",
+        "srl_nokia-features:virtual-ip-discovery",
+        "srl_nokia-features:vlan-id-optional",
+        "srl_nokia-features:vlan-tpid",
+        "srl_nokia-features:vxlan",
+        "srl_nokia-features:vxlan-stats",
+        "srl_nokia-features:warm-reboot"
+      ],
+      "checksum": "429e6f46703cc7f5$51d9cb53a3e14d7834ac7b8ca6a5794dcb178362"
     },
     "build": {
       "git-branch": "SRL_26_3_B1",
@@ -1404,6 +1715,53 @@
       }
     ]
   },
+  "srl_nokia-tunnel-interfaces:tunnel-interface": [
+    {
+      "name": "vxlan1",
+      "vxlan-interface": [
+        {
+          "index": 1,
+          "type": "srl_nokia-interfaces:bridged",
+          "ingress": {
+            "vni": 100
+          }
+        }
+      ]
+    }
+  ],
+  "srl_nokia-routing-policy:routing-policy": {
+    "policy": [
+      {
+        "name": "export-underlay",
+        "statement": [
+          {
+            "name": "10",
+            "match": {
+              "protocol": "srl_nokia-common:bgp"
+            },
+            "action": {
+              "policy-result": "accept"
+            }
+          },
+          {
+            "name": "20",
+            "match": {
+              "protocol": "srl_nokia-common:local"
+            },
+            "action": {
+              "policy-result": "accept"
+            }
+          }
+        ]
+      },
+      {
+        "name": "pass-all",
+        "default-action": {
+          "policy-result": "accept"
+        }
+      }
+    ]
+  },
   "srl_nokia-acl:acl": {
     "acl-filter": [
       {
@@ -1502,9 +1860,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1522,9 +1878,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1542,9 +1896,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1562,9 +1914,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1582,9 +1932,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1602,9 +1950,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1622,9 +1968,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1642,9 +1986,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1662,9 +2004,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1682,9 +2022,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1702,9 +2040,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1722,9 +2058,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1742,9 +2076,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1762,9 +2094,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1782,9 +2112,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1802,9 +2130,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1822,9 +2148,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1842,9 +2166,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1862,9 +2184,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1882,9 +2202,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1904,9 +2222,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1918,9 +2234,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1938,9 +2252,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1975,9 +2287,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -1995,9 +2305,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2015,9 +2323,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2029,9 +2335,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2043,9 +2347,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2065,9 +2367,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2085,9 +2385,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2107,9 +2405,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2127,9 +2423,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2147,9 +2441,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2167,9 +2459,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2187,9 +2477,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2207,9 +2495,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2227,9 +2513,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2241,9 +2525,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2261,9 +2543,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2281,9 +2561,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2291,9 +2569,7 @@
             "description": "Drop all else",
             "action": {
               "log": true,
-              "drop": {
-                
-              }
+              "drop": {}
             }
           }
         ]
@@ -2489,9 +2765,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2509,9 +2783,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2529,9 +2801,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2549,9 +2819,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2569,9 +2837,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2589,9 +2855,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2609,9 +2873,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2629,9 +2891,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2649,9 +2909,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2669,9 +2927,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2689,9 +2945,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2709,9 +2963,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2729,9 +2981,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2749,9 +2999,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2769,9 +3017,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2789,9 +3035,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2809,9 +3053,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2829,9 +3071,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2849,9 +3089,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2869,9 +3107,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2891,9 +3127,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2905,9 +3139,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2919,9 +3151,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2939,9 +3169,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2956,9 +3184,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2973,9 +3199,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -2990,9 +3214,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3007,9 +3229,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3021,9 +3241,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3043,9 +3261,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3063,9 +3279,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3085,9 +3299,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3105,9 +3317,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3125,9 +3335,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3145,9 +3353,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3165,9 +3371,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3185,9 +3389,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3205,9 +3407,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3225,9 +3425,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3245,9 +3443,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3265,9 +3461,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3279,9 +3473,7 @@
               }
             },
             "action": {
-              "accept": {
-                
-              }
+              "accept": {}
             }
           },
           {
@@ -3289,9 +3481,7 @@
             "description": "Drop all else",
             "action": {
               "log": true,
-              "drop": {
-                
-              }
+              "drop": {}
             }
           }
         ]
@@ -3509,6 +3699,53 @@
   },
   "srl_nokia-interfaces:interface": [
     {
+      "name": "ethernet-1/1",
+      "admin-state": "enable",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "ipv4": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "192.168.11.1/31"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/2",
+      "admin-state": "enable",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "ipv4": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "192.168.21.1/31"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/3",
+      "admin-state": "enable",
+      "subinterface": [
+        {
+          "index": 1,
+          "type": "srl_nokia-interfaces:bridged",
+          "admin-state": "enable"
+        }
+      ]
+    },
+    {
       "name": "mgmt0",
       "admin-state": "enable",
       "subinterface": [
@@ -3517,21 +3754,163 @@
           "admin-state": "enable",
           "ipv4": {
             "admin-state": "enable",
-            "srl_nokia-interfaces-ip-dhcp:dhcp-client": {
-              
-            }
+            "srl_nokia-interfaces-ip-dhcp:dhcp-client": {}
           },
           "ipv6": {
             "admin-state": "enable",
-            "srl_nokia-interfaces-ip-dhcp:dhcp-client": {
-              
-            }
+            "srl_nokia-interfaces-ip-dhcp:dhcp-client": {}
+          }
+        }
+      ]
+    },
+    {
+      "name": "system0",
+      "admin-state": "enable",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "ipv4": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "10.0.0.11/32"
+              }
+            ]
           }
         }
       ]
     }
   ],
   "srl_nokia-network-instance:network-instance": [
+    {
+      "name": "default",
+      "type": "srl_nokia-network-instance:default",
+      "admin-state": "enable",
+      "router-id": "10.0.0.11",
+      "interface": [
+        {
+          "name": "ethernet-1/1.0"
+        },
+        {
+          "name": "ethernet-1/2.0"
+        },
+        {
+          "name": "system0.0"
+        }
+      ],
+      "protocols": {
+        "srl_nokia-bgp:bgp": {
+          "admin-state": "enable",
+          "autonomous-system": 65011,
+          "router-id": "10.0.0.11",
+          "afi-safi": [
+            {
+              "afi-safi-name": "srl_nokia-common:evpn",
+              "admin-state": "enable"
+            },
+            {
+              "afi-safi-name": "srl_nokia-common:ipv4-unicast",
+              "admin-state": "enable"
+            }
+          ],
+          "group": [
+            {
+              "group-name": "overlay",
+              "export-policy": [
+                "pass-all"
+              ],
+              "import-policy": [
+                "pass-all"
+              ],
+              "multihop": {
+                "admin-state": "enable",
+                "maximum-hops": 3
+              },
+              "afi-safi": [
+                {
+                  "afi-safi-name": "srl_nokia-common:evpn",
+                  "admin-state": "enable"
+                }
+              ]
+            },
+            {
+              "group-name": "underlay",
+              "export-policy": [
+                "export-underlay"
+              ],
+              "import-policy": [
+                "pass-all"
+              ],
+              "afi-safi": [
+                {
+                  "afi-safi-name": "srl_nokia-common:ipv4-unicast",
+                  "admin-state": "enable"
+                }
+              ]
+            }
+          ],
+          "neighbor": [
+            {
+              "peer-address": "10.0.0.12",
+              "peer-as": 65012,
+              "peer-group": "overlay",
+              "transport": {
+                "local-address": "10.0.0.11"
+              }
+            },
+            {
+              "peer-address": "192.168.11.0",
+              "peer-as": 65000,
+              "peer-group": "underlay"
+            },
+            {
+              "peer-address": "192.168.21.0",
+              "peer-as": 65000,
+              "peer-group": "underlay"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "mac-vrf-1",
+      "type": "srl_nokia-network-instance:mac-vrf",
+      "admin-state": "enable",
+      "interface": [
+        {
+          "name": "ethernet-1/3.1"
+        }
+      ],
+      "vxlan-interface": [
+        {
+          "name": "vxlan1.1"
+        }
+      ],
+      "protocols": {
+        "bgp-evpn": {
+          "srl_nokia-bgp-evpn:bgp-instance": [
+            {
+              "id": 1,
+              "admin-state": "enable",
+              "vxlan-interface": "vxlan1.1",
+              "evi": 100
+            }
+          ]
+        },
+        "srl_nokia-bgp-vpn:bgp-vpn": {
+          "bgp-instance": [
+            {
+              "id": 1,
+              "route-target": {
+                "export-rt": "target:65000:100",
+                "import-rt": "target:65000:100"
+              }
+            }
+          ]
+        }
+      }
+    },
     {
       "name": "mgmt",
       "type": "srl_nokia-network-instance:ip-vrf",
