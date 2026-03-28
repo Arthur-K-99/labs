@@ -1,0 +1,54 @@
+services:
+  step-ca:
+    image: smallstep/step-ca:latest
+    container_name: lab-step-ca
+    environment:
+      # Auto-initializes the CA on the first run
+      - DOCKER_STEPCA_INIT_NAME=Fictional Lab Root CA
+      - DOCKER_STEPCA_INIT_DNS_NAMES=step-ca,localhost
+      - DOCKER_STEPCA_INIT_PROVISIONER_NAME=admin
+      - DOCKER_STEPCA_INIT_PASSWORD=password123 # Lab use only!
+    volumes:
+      - ./ca-data:/home/step
+    ports:
+      - "9000:9000"
+    networks:
+      - pki-lab-net
+    restart: unless-stopped
+
+  web-server:
+    image: nginx:alpine
+    container_name: lab-nginx
+    volumes:
+      - ./web-data:/usr/share/nginx/html
+      - ./nginx-conf:/etc/nginx/conf.d
+      - ./cert-data:/etc/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      pki-lab-net:
+        aliases:
+          - app.fictional-lab.com
+    depends_on:
+      - step-ca
+    # We override the default command to start nginx AND run a daily reload loop
+    command: "/bin/sh -c 'while :; do sleep 24h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    restart: unless-stopped
+
+  certbot:
+    image: certbot/certbot
+    container_name: lab-certbot
+    volumes:
+      - ./cert-data:/etc/letsencrypt
+      - ./web-data:/usr/share/nginx/html
+    networks:
+      - pki-lab-net
+    # This entrypoint keeps the container alive, waking up every 12 hours
+    # to check if the certificate is within 30 days of expiring.
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    restart: unless-stopped
+
+networks:
+  pki-lab-net:
+    driver: bridge
